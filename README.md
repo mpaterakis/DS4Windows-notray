@@ -1,4 +1,11 @@
-# DS4Windows
+# DS4Windows-notray
+This is a fork of the amazing DS4Windows project, that only adds one thing: It has the ability to disable the app's tray icon.
+
+## Usage
+To achieve this magnificent result, simply use the "notray" parameter when launching the program. For example: `DS4Windows.exe -notray`.
+Combining this with the "Start Minimized" setting will result in the app running with no visible window for the first launch, making it as unintrusive as it gets.
+
+# DS4Windows (Original README)
 
 Like those other DS4 tools, but sexier.
 
