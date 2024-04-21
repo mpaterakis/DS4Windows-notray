@@ -25,6 +25,7 @@ namespace DS4WinWPF
     {
         private bool mini;
         private bool stop;
+        private bool notray;
         private bool driverinstall;
         private bool reenableDevice;
         private string deviceInstanceId;
@@ -38,6 +39,7 @@ namespace DS4WinWPF
 
         public bool Mini { get => mini; }
         public bool Stop { get => stop; }
+        public bool NoTray { get => notray; }
         public bool Driverinstall { get => driverinstall; }
         public bool ReenableDevice { get => reenableDevice; }
         public bool Runtask { get => runtask; }
@@ -56,8 +58,12 @@ namespace DS4WinWPF
             for (int i = 0; i < args.Length; i++)
             {
                 string arg = args[i];
-                switch(arg)
+                switch (arg)
                 {
+                    case "notray":
+                    case "-notray":
+                        notray = true;
+                        break;
                     case "driverinstall":
                     case "-driverinstall":
                         driverinstall = true;

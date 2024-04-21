@@ -131,6 +131,11 @@ namespace DS4WinWPF.DS4Forms
                 // create the tray icon explicitly here
                 try
                 {
+                    // Hide the tray icon if notray argument is used
+                    if (parser.NoTray)
+                    {
+                        notifyIcon.Visibility = Visibility.Hidden;
+                    }
                     // Loaded event handler has enablesEfficiencyMode default to false so
                     // do the same here
                     notifyIcon.ForceCreate(enablesEfficiencyMode: false);
